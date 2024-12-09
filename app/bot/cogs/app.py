@@ -157,7 +157,7 @@ class app(commands.Cog):
     async def getemail(self, after):
         email = None
         await embedinfo(after,'Welcome To '+ PLEX_SERVER_NAME +'. Please reply with your email to be added to the Plex server!')
-        await embedinfo(after,'If you do not respond within 24 hours, the request will be cancelled, and the server admin will need to add you manually.')
+        await embedinfo(after,'If you do not respond within 24 hours, the request will be cancelled, you need to remove your thumbs up emoji from the welcome message and re-add it to reactivate the request.')
         while(email == None):
             def check(m):
                 return m.author == after and not m.guild
@@ -178,7 +178,7 @@ class app(commands.Cog):
     async def getusername(self, after):
         username = None
         await embedinfo(after, f"Welcome To Jellyfin! Please reply with your username to be added to the Jellyfin server!")
-        await embedinfo(after, f"If you do not respond within 24 hours, the request will be cancelled, and the server admin will need to add you manually.")
+        await embedinfo(after, f"If you do not respond within 24 hours,  the request will be cancelled, you need to remove your thumbs up emoji from the welcome message and re-add it to reactivate the request.")
         while (username is None):
             def check(m):
                 return m.author == after and not m.guild
